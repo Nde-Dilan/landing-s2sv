@@ -2,7 +2,7 @@ import { Button } from '@chakra-ui/react'
 import { Link } from '@saas-ui/react'
 import { NextSeoProps } from 'next-seo'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
-import { FiCheck } from 'react-icons/fi'
+import { FiActivity, FiAlertCircle, FiBook, FiCamera, FiCheck, FiCpu, FiGlobe, FiMessageCircle, FiUser, FiUsers } from 'react-icons/fi'
 import { Logo } from './logo'
 
 const siteConfig = {
@@ -68,27 +68,28 @@ const siteConfig = {
     title: 'Start building with Saas UI',
     features: [
       {
-        icon: FiCheck,
-        title: 'Accessible',
-        description: 'All components strictly follow WAI-ARIA standards.',
+        title: "AI-Powered Advice",
+        icon: FiCpu,
+        className: "icon-badge",
+        description:
+          "Get instant, culturally relevant health advice based on traditional Cameroonian remedies, available 24/7.",
+        variant: "inline",
       },
       {
-        icon: FiCheck,
-        title: 'Themable',
+        title: "Plant Recognition",
+        icon: FiCamera,
+        className: "icon-badge",
         description:
-          'Fully customize all components to your brand with theme support and style props.',
+          "Use our advanced image recognition to identify medicinal plants accurately, ensuring safe and effective use of natural remedies.",
+        variant: "inline",
       },
       {
-        icon: FiCheck,
-        title: 'Composable',
+        title: "Personalized Care",
+        icon: FiUser,
+        className: "icon-badge",
         description:
-          'Compose components to fit your needs and mix them together to create new ones.',
-      },
-      {
-        icon: FiCheck,
-        title: 'Productive',
-        description:
-          'Designed to reduce boilerplate and fully typed, build your product at speed.',
+          "Receive advice tailored to your specific symptoms, medical history, and local environmental factors.",
+        variant: "inline",
       },
     ],
   },

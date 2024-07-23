@@ -1,7 +1,10 @@
 import { NextPage } from 'next'
 import NextLink from 'next/link'
 import { Box, Center, Stack, Text } from '@chakra-ui/react'
-import { Auth, Link } from '@saas-ui/react'
+import { Field, Link } from '@saas-ui/react'
+import {
+  Auth,
+} from '@saas-ui/auth'
 import { Features } from 'components/features'
 import { BackgroundGradient } from 'components/gradients/background-gradient'
 import { Section } from 'components/section'
@@ -9,6 +12,7 @@ import siteConfig from 'data/config'
 
 import { FaGithub, FaGoogle } from 'react-icons/fa'
 import { PageTransition } from 'components/motion/page-transition'
+import { NextjsLogo } from 'components/logos'
 
 const providers = {
   google: {
@@ -45,12 +49,7 @@ const Login: NextPage = () => {
         >
           <Box pe="20">
             <NextLink href="/">
-              <Box
-                as={siteConfig.logo}
-                width="160px"
-                ms="4"
-                mb={{ base: 0, lg: 16 }}
-              />
+            <NextjsLogo/>
             </NextLink>
             <Features
               display={{ base: 'none', lg: 'flex' }}
@@ -62,7 +61,6 @@ const Login: NextPage = () => {
               maxW={{ base: '100%', xl: '80%' }}
               features={siteConfig.signup.features.map((feature) => ({
                 iconPosition: 'left',
-                variant: 'left-icon',
 
                 ...feature,
               }))}
@@ -72,10 +70,12 @@ const Login: NextPage = () => {
             <Box width="container.sm" pt="8" px="8">
               <Auth
                 view="signup"
+                type="password"
                 title={siteConfig.signup.title}
                 providers={providers}
                 loginLink={<Link href="/login">Log in</Link>}
               >
+                 <Field name="company" label="Company" />
                 <Text color="muted" fontSize="sm">
                   By signing up you agree to our{' '}
                   <Link href={siteConfig.termsUrl} color="white">

@@ -1,0 +1,15 @@
+  /* =====  SHADCN OVERRIDES */
+  .shad-primary-btn {
+    background-color: rgb(34 197 94) !important;
+    color: white !important;
+  }
+
+  .circle{
+   
+  }
+
+.icon-badge{
+    border: 4px solid rgb(61, 214, 31);
+    background-color: rgb(57, 199, 76);
+    color: greenyellow;
+  }

@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import NextLink from 'next/link'
 import { Box, Center, Stack, Text } from '@chakra-ui/react'
-import { Field, Link } from '@saas-ui/react'
+import { Br, Field, Link } from '@saas-ui/react'
 import {
   Auth,
 } from '@saas-ui/auth'
@@ -28,7 +28,9 @@ const providers = {
 
 const Login: NextPage = () => {
   return (
-    <Section height="100vh" innerWidth="container.xl">
+    <Section height="100vh" innerWidth="container.xl"
+    ml = {{ base : "44", sm : "0"}}
+    >
       <BackgroundGradient
         zIndex="-1"
         width={{ base: 'full', lg: '50%' }}
@@ -40,6 +42,9 @@ const Login: NextPage = () => {
           borderColor: 'gray.700',
         }}
       />
+      <Br/>
+      <Br/>
+      <Br/>
       <PageTransition height="100%" display="flex" alignItems="center">
         <Stack
           width="100%"
@@ -51,6 +56,8 @@ const Login: NextPage = () => {
             <NextLink href="/">
             <NextjsLogo/>
             </NextLink>
+            <Br/>
+      <Br/>
             <Features
               display={{ base: 'none', lg: 'flex' }}
               columns={1}
@@ -91,20 +98,24 @@ const Login: NextPage = () => {
           </Center>
         </Stack>
       </PageTransition>
+      
     </Section>
   )
 }
 
-export default Login
+
+export default Login;
 
 export const getStaticProps = () => {
   return {
     props: {
       header: {
-        display: 'none',
+        // display: 'none',
       },
       footer: {
-        borderTopWidth: '1px',
+                // display: 'none',
+
+      
       },
     },
   }

@@ -63,7 +63,7 @@ const Login: NextPage = () => {
               columns={1}
               iconSize={4}
               flex="1"
-              py="0"
+              py="0" 
               ps="0"
               maxW={{ base: '100%', xl: '80%' }}
               features={siteConfig.signup.features.map((feature) => ({
